@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@300;400;800&family=Poppins:ital,wght@1,200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: rgb(81, 89, 94);
+}
+
+.App {
+  text-align: center;
+  background-color: #e0e6f4;
+  font-family: Montserrat;
+}
+
+.App.dark {
+  background-color: #14161a;
+}

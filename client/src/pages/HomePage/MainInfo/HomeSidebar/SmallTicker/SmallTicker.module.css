@@ -1,0 +1,253 @@
+.ticker_small_section {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.ticker_small_section img {
+  width: 12%;
+  height: 12%;
+  margin: 0 -15% 0 10%;
+}
+
+.ticker_small_section h4 {
+  color: #14161a;
+  padding: 0 10px;
+  width: 5vw;
+  margin-left: 15%;
+}
+
+.ticker_small_section.dark h4 {
+  color: #eff0f0;
+}
+
+/* trash bin */
+.ticker_small_section_button {
+  max-width: 4rem;
+  min-height: 3rem;
+  background: #e0e6f4;
+  border: none;
+  width: 3rem;
+  margin-right: 10%;
+}
+
+.ticker_small_section_button.dark {
+  max-width: 4rem;
+  min-height: 3rem;
+  background: #242423;
+  border: none;
+  width: 3rem;
+  margin-right: 10%;
+}
+
+section > button > svg {
+  background: #c9e1f1;
+  font-size: 2rem;
+  transition: 0.3s;
+}
+
+section > button.dark > svg {
+  background: #242423;
+}
+
+section > button > svg:hover {
+  font-size: 2.5rem;
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-2px) rotate(5deg);
+  }
+  40% {
+    transform: translateX(2px) rotate(-5deg);
+  }
+  60% {
+    transform: translateX(-2px) rotate(5deg);
+  }
+  80% {
+    transform: translateX(2px) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+section:nth-child(n) > button > svg > path {
+  color: #49535b;
+}
+
+section:nth-child(n) > button.dark > svg > path {
+  color: #f6f4eb;
+}
+
+@media screen and (min-width: 2500px) {
+  .ticker_small_section {
+    width: 90%;
+  }
+
+  .ticker_small_section img {
+    width: 13%;
+    height: 13%;
+  }
+
+  .ticker_small_section h4 {
+    font-size: 2.5rem;
+    margin-right: -9%;
+  }
+
+  .ticker_small_section_button {
+    max-width: 5rem;
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .ticker_small_section {
+    width: 100%;
+  }
+
+  .ticker_small_section img {
+    width: 12%;
+    height: 12%;
+    margin: 0 -25% 0 5%;
+  }
+
+  .ticker_small_section h4 {
+    color: #14161a;
+    padding: 0 10px;
+    margin-right: -3%;
+  }
+
+  .ticker_small_section.dark h4 {
+    color: #eff0f0;
+  }
+
+  .ticker_small_section_button {
+    max-width: 2.4rem;
+    min-height: 2rem;
+    margin-left: 2%;
+    margin-right: 4%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .ticker_small_section img {
+    width: 12%;
+    height: 12%;
+    margin: 0 -35% 0 5%;
+  }
+
+  .ticker_small_section_button {
+    max-width: 2.2rem;
+    min-height: 2rem;
+    margin-left: 2%;
+    margin-right: 5%;
+  }
+
+  section > button > svg {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .ticker_small_section img {
+    width: 14%;
+    height: 14%;
+    margin: 0 -40% 0 5%;
+  }
+
+  .ticker_small_section h4 {
+    font-size: 0.8rem;
+    margin-right: -10%;
+  }
+
+  .ticker_small_section_button {
+    max-width: 2.2rem;
+    min-height: 2rem;
+    margin-left: 2%;
+    margin-right: 5%;
+  }
+
+  section > button > svg {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .ticker_small_section {
+    width: 110%;
+    justify-content: space-around;
+  }
+
+  .ticker_small_section img {
+    width: 10%;
+    height: 100%;
+    margin: 0 -15% 0 10%;
+  }
+
+  .ticker_small_section h4 {
+    padding: 0 10px;
+    width: 5vw;
+    font-size: 0.9rem;
+    margin-right: 2%;
+  }
+
+  .ticker_small_section_button {
+    max-width: 2.5rem;
+    border-radius: 5px;
+    margin-right: 10%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ticker_small_section img {
+    width: 10%;
+    height: 100%;
+    margin: 0 -20% 0 5%;
+  }
+
+  .ticker_small_section h4 {
+    padding: 0 10px;
+    width: 5vw;
+    font-size: 0.9rem;
+    margin-right: 5%;
+  }
+
+  .ticker_small_section_button {
+    max-width: 2.3rem;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .ticker_small_section {
+    width: 110%;
+  }
+
+  .ticker_small_section img {
+    width: 15%;
+    height: 90%;
+    margin: 0 1% 0 3%;
+  }
+
+  .ticker_small_section h4 {
+    margin-right: 7%;
+    padding: 0 15px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .ticker_small_section_button {
+    max-width: 2.2rem;
+    margin-left: 2%;
+    margin-right: 7%;
+  }
+}

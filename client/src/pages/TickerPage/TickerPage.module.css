@@ -1,0 +1,23 @@
+.ticker_page {
+  padding-top: 7vh;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat";
+}
+
+@media screen and (max-width: 1000px) {
+  .ticker_page {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4vh;
+    justify-content: flex-start;
+    height: 130vh;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .ticker_page {
+    height: 142vh;
+  }
+}

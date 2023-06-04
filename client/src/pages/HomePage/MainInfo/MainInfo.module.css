@@ -1,0 +1,19 @@
+.main_info {
+  display: flex;
+  width: 100%;
+  min-height: 80vh;
+  flex-direction: row;
+  background-color: #e0e6f4;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main_info.dark {
+  background-color: #242423;
+}
+
+@media screen and (max-width: 750px) {
+  .main_info {
+    flex-direction: column;
+  }
+}

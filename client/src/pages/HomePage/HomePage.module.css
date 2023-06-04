@@ -1,0 +1,10 @@
+.home_page {
+  min-height: 100vh;
+  padding-top: 7vh;
+}
+
+@media screen and (max-width: 480px) {
+  .home_page {
+    padding-top: 9vh;
+  }
+}

@@ -1,0 +1,155 @@
+.toggler {
+  display: flex;
+  align-items: center;
+}
+
+.toggler p {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.toggler_slider {
+  width: 25px;
+  height: 13px;
+  background-color: #4e4c54;
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: content-box;
+}
+
+.toggler_slider.dark {
+  border-color: white;
+  background-color: #f5f5f5;
+  justify-content: flex-end;
+}
+
+.toggler_slider_circle {
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.toggler_slider_circle.dark {
+  background-color: black;
+}
+
+.toggler_light {
+  color: #525254;
+}
+
+.toggler_light.dark {
+  color: #d1d1d1;
+}
+
+.toggler_dark {
+  color: #525254;
+}
+
+.toggler_dark.dark {
+  color: #d1d1d1;
+}
+
+@media screen and (min-width: 2500px) {
+  .toggler p {
+    font-size: 2rem;
+  }
+
+  .toggler_slider {
+    width: 40px;
+    height: 18px;
+    margin-inline: 14px;
+    border: 1px solid black;
+  }
+
+  .toggler_slider_circle {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .toggler p {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  .toggler_slider {
+    width: 35px;
+    height: 16px;
+    border: 2px solid black;
+  }
+
+  .toggler_slider_circle {
+    height: 16px;
+    width: 16px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .toggler {
+    margin-left: -5%;
+  }
+
+  .toggler p {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  .toggler_slider {
+    width: 30px;
+    height: 14px;
+    border: 2px solid black;
+  }
+
+  .toggler_slider_circle {
+    height: 14px;
+    width: 14px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .toggler {
+    margin-left: -7%;
+  }
+
+  .toggler p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .toggler {
+    margin-right: -9%;
+    margin-left: -4%;
+  }
+
+  .toggler p {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .toggler_slider {
+    width: 25px;
+    height: 11px;
+    border: 2px solid black;
+  }
+
+  .toggler_slider_circle {
+    height: 11px;
+    width: 11px;
+  }
+
+  .toggler_light {
+    margin: 0 -1% 0 -1%;
+  }
+
+  .toggler_dark {
+    margin: 0 -1% 0 -1%;
+  }
+}

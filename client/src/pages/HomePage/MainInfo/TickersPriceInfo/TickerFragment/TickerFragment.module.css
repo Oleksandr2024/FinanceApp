@@ -1,0 +1,234 @@
+.ticker_fragment {
+  margin: -29px 0 30px 0;
+  display: flex;
+  padding-top: 10px;
+  text-align: center;
+  transition: 0.8s;
+}
+
+.ticker_fragment:hover {
+  background-color: #d3eaf2;
+}
+
+.ticker_fragment.dark:hover {
+  background-color: #37342c;
+  color: #8a740e;
+}
+
+.ticker_fragment img {
+  width: 70px;
+  height: 70px;
+  margin-right: 40px;
+}
+
+/* all fragments is a navlink (a) tag */
+.ticker_fragment a {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  color: black;
+  font-size: 1.4rem;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  border-bottom: 1px solid rgb(96, 95, 95);
+}
+
+.ticker_fragment_main {
+  display: flex;
+  width: 25%;
+  padding-left: 40px;
+}
+
+.ticker_fragment_main p {
+  margin-block: 10px; /*top+bottom*/
+  color: black;
+}
+
+.ticker_fragment_main.dark p {
+  margin-block: 10px; /*top+bottom*/
+}
+
+.ticker_fragment_name {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+.ticker_fragment_name h3 {
+  color: black;
+}
+
+.ticker_fragment_name.dark h3 {
+  color: rgb(255, 255, 255);
+}
+
+.ticker_fragment p {
+  width: 20%;
+  font-size: 1.3rem;
+  padding-top: 10px;
+  color: black;
+}
+
+.ticker_fragment.dark p {
+  color: white;
+}
+
+/* name "Apple", "Google" etc */
+.ticker_fragment_name p {
+  font-size: 1.25rem;
+  margin-top: -2px;
+  color: rgb(47, 117, 28);
+}
+
+@media screen and (min-width: 2500px) {
+  .ticker_fragment img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 3%;
+    margin-top: 2%;
+  }
+
+  .ticker_fragment_main {
+    padding-left: 8%;
+  }
+
+  .ticker_fragment_main p {
+    margin-block: 20px;
+  }
+
+  .ticker_fragment_name h3 {
+    font-size: 2.8rem;
+    margin-top: 4%;
+  }
+
+  .ticker_fragment p {
+    font-size: 2.4rem;
+    margin-top: 0.7%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .ticker_fragment {
+    overflow: hidden;
+  }
+
+  .ticker_fragment img {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
+
+  .ticker_fragment_main {
+    padding-left: 5px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .ticker_fragment {
+    margin: -25px 0 30px 0;
+  }
+
+  .ticker_fragment img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .tickerName {
+    font-size: 1.2rem;
+  }
+
+  .ticker_fragment a {
+    padding-top: 15px;
+  }
+
+  .ticker_fragment_main {
+    padding-left: 5px;
+  }
+
+  .ticker_fragment p {
+    font-size: 1.1rem;
+  }
+
+  /* name "Apple", "Google" etc */
+  .ticker_fragment_name p {
+    font-size: 0.9rem;
+    margin-top: -2px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .ticker_fragment {
+    margin: -28px 0 30px 0;
+    padding-top: 5px;
+  }
+
+  .ticker_fragment img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .ticker_fragment_main {
+    display: flex;
+    width: 30%;
+    padding-left: 1px;
+  }
+
+  .ticker_fragment_name h3 {
+    font-size: 1.2rem;
+  }
+
+  .ticker_fragment p {
+    width: 20%;
+    font-size: 1.1rem;
+    padding-top: 15px;
+  }
+
+  /* name "Apple", "Google" etc */
+  .ticker_fragment_name p {
+    font-size: 1rem;
+    margin-top: -2px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .ticker_fragment {
+    margin: -29px 0 25px 0;
+    display: flex;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .ticker_fragment img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .ticker_fragment_main {
+    width: 40%;
+    padding-left: 12px;
+  }
+
+  .ticker_fragment_main p {
+    margin-block: 10px;
+  }
+
+  .ticker_fragment_name h3 {
+    font-size: 1.2rem;
+  }
+
+  .ticker_fragment p {
+    width: 20%;
+    font-size: 1.1rem;
+    padding-top: 10px;
+    margin-right: 5px;
+  }
+
+  /* name "Apple", "Google" etc */
+  .ticker_fragment_name p {
+    font-size: 0.9rem;
+    margin-top: -2px;
+  }
+}

@@ -1,0 +1,46 @@
+.currency_rate {
+  margin: -17% 20% 15% 1%;
+  padding-right: 15%;
+  color: rgb(27, 47, 54);
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.currency_rate.dark {
+  color: rgb(244, 185, 9);
+}
+
+@media screen and (min-width: 2500px) {
+  .currency_rate {
+    margin: -12% 20% 10% -11%;
+    padding-right: 15%;
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .currency_rate {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .currency_rate {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .currency_rate {
+    margin: -10% 20% 10% -8%;
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .currency_rate {
+    margin: -3% 1% 5% 8%;
+    font-size: 0.7rem;
+  }
+}
