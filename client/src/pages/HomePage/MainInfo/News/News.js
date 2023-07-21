@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
 import styles from "./News.module.css";
+import clsx from "clsx";
 
 const News = ({ darkMode }) => {
   return (
     <div
       data-testid="news"
-      className={`${styles.news} ${darkMode ? styles.dark : ""}`}
+      className={clsx(styles.news, { [styles.dark]: darkMode })}
     >
       <h1>News</h1>
       <section className={styles.news_section}>
@@ -16,17 +17,17 @@ const News = ({ darkMode }) => {
           target="_blank"
         >
           <div
-            className={`${styles.news_section_div_1} ${
-              darkMode ? styles.dark : ""
-            }`}
+            className={clsx(styles.news_section_div_1, {
+              [styles.dark]: darkMode,
+            })}
           >
             <h4>MarketWatch</h4>
             <i>8 hours ago</i>
           </div>
           <div
-            className={`${styles.news_section_div_2} ${
-              darkMode ? styles.dark : ""
-            }`}
+            className={clsx(styles.news_section_div_2, {
+              [styles.dark]: darkMode,
+            })}
           >
             <p>
               <strong>Tesla's</strong> stock jumps 4% as Elon Musk makes first
@@ -48,17 +49,17 @@ const News = ({ darkMode }) => {
           target="_blank"
         >
           <div
-            className={`${styles.news_section_div_1} ${
-              darkMode ? styles.dark : ""
-            }`}
+            className={clsx(styles.news_section_div_1, {
+              [styles.dark]: darkMode,
+            })}
           >
             <h4>Bloomberg.com</h4>
             <i>1 day ago</i>
           </div>
           <div
-            className={`${styles.news_section_div_2} ${
-              darkMode ? styles.dark : ""
-            }`}
+            className={clsx(styles.news_section_div_2, {
+              [styles.dark]: darkMode,
+            })}
           >
             <p>
               AI Could Add $30-$40 per Share to <strong>Apple's</strong> Story:
@@ -80,17 +81,17 @@ const News = ({ darkMode }) => {
           target="_blank"
         >
           <div
-            className={`${styles.news_section_div_1} ${
-              darkMode ? styles.dark : ""
-            }`}
+            className={clsx(styles.news_section_div_1, {
+              [styles.dark]: darkMode,
+            })}
           >
             <h4>Business Insider</h4>
             <i>1 hour ago</i>
           </div>
           <div
-            className={`${styles.news_section_div_2} ${
-              darkMode ? styles.dark : ""
-            }`}
+            className={clsx(styles.news_section_div_2, {
+              [styles.dark]: darkMode,
+            })}
           >
             <p>
               <strong>Meta</strong> Platforms Inc. stock rises Tuesday, still
@@ -112,17 +113,17 @@ const News = ({ darkMode }) => {
           target="_blank"
         >
           <div
-            className={`${styles.news_section_div_1} ${
-              darkMode ? styles.dark : ""
-            }`}
+            className={clsx(styles.news_section_div_1, {
+              [styles.dark]: darkMode,
+            })}
           >
             <h4>Seeking Alpha</h4>
             <i>2 days ago</i>
           </div>
           <div
-            className={`${styles.news_section_div_2} ${
-              darkMode ? styles.dark : ""
-            }`}
+            className={clsx(styles.news_section_div_2, {
+              [styles.dark]: darkMode,
+            })}
           >
             <p>
               4 stocks to watch on Tuesday: <strong>Microsoft</strong>, Ford and
@@ -144,17 +145,17 @@ const News = ({ darkMode }) => {
           target="_blank"
         >
           <div
-            className={`${styles.news_section_div_1} ${
-              darkMode ? styles.dark : ""
-            }`}
+            className={clsx(styles.news_section_div_1, {
+              [styles.dark]: darkMode,
+            })}
           >
             <h4>The Motley Fool</h4>
             <i>3 days ago</i>
           </div>
           <div
-            className={`${styles.news_section_div_2} ${
-              darkMode ? styles.dark : ""
-            }`}
+            className={clsx(styles.news_section_div_2, {
+              [styles.dark]: darkMode,
+            })}
           >
             <p>
               <strong>Amazon</strong> Stock Jumps 43% YTD; More Upside Left, Say

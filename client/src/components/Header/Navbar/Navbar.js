@@ -1,27 +1,37 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
+import clsx from "clsx";
 
 const Navbar = ({ darkMode }) => {
-  const [activeNavlink, setActiveNavlink] = useState(null);
+  const [activeNavlink1, setActiveNavlink1] = useState(false);
+  const [activeNavlink2, setActiveNavlink2] = useState(false);
 
   return (
-    <nav className={`${styles.nav} ${darkMode ? styles.dark : ""} `}>
+    <nav className={clsx(styles.nav, { [styles.dark]: darkMode })}>
       <NavLink
-        className={`${styles.navlink} ${
-          activeNavlink === 1 ? styles.active : ""
-        } ${darkMode ? styles.dark : ""}`}
+        className={clsx(styles.navlink, {
+          [styles.active]: activeNavlink1,
+          [styles.dark]: darkMode,
+        })}
         to="/"
-        onClick={() => setActiveNavlink(1)}
+        onClick={() => {
+          setActiveNavlink1(true);
+          setActiveNavlink2(false);
+        }}
       >
         <span>Home</span>
       </NavLink>
       <NavLink
-        className={`${styles.navlink} ${
-          activeNavlink === 2 ? styles.active : ""
-        } ${darkMode ? styles.dark : ""}`}
-        to="about"
-        onClick={() => setActiveNavlink(2)}
+        className={clsx(styles.navlink, {
+          [styles.active]: activeNavlink2,
+          [styles.dark]: darkMode,
+        })}
+        to="/about"
+        onClick={() => {
+          setActiveNavlink1(false);
+          setActiveNavlink2(true);
+        }}
       >
         <span>About</span>
       </NavLink>

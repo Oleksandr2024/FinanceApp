@@ -13,6 +13,7 @@ import styles from "./TickersPriceInfo.module.css";
 
 //components
 import TickerFragment from "./TickerFragment/TickerFragment";
+import clsx from "clsx";
 
 const TickersPriceInfo = ({ darkMode }) => {
   const tickers = useSelector(selectAllTickers);
@@ -40,9 +41,7 @@ const TickersPriceInfo = ({ darkMode }) => {
   //if user removes all tickers from a watching group, we need to show this paragraph
   const paragraph = (
     <p
-      className={`${styles.no_tickers_paragraph} ${
-        darkMode ? styles.dark : ""
-      }`}
+      className={clsx(styles.no_tickers_paragraph, { [styles.dark]: darkMode })}
     >
       Oops, looks like you need to add some tickers to your watching group to
       see the info
@@ -52,12 +51,12 @@ const TickersPriceInfo = ({ darkMode }) => {
   return (
     <div
       data-testid="tickers-price-info"
-      className={`${styles.tickers_price_info} ${darkMode ? styles.dark : ""}`}
+      className={clsx(styles.tickers_price_info, { [styles.dark]: darkMode })}
     >
       <section
-        className={`${styles.tickers_price_info_headings} ${
-          darkMode ? styles.dark : ""
-        }`}
+        className={clsx(styles.tickers_price_info_headings, {
+          [styles.dark]: darkMode,
+        })}
       >
         <p className={styles.first_p}>&nbsp;&nbsp;&nbsp; Item</p>
         <p className={styles.next_p}>

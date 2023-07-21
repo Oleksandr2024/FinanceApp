@@ -1,3 +1,5 @@
+@import "../../../../../global.css";
+
 .currency_rate {
   margin: -17% 20% 15% 1%;
   padding-right: 15%;
@@ -8,7 +10,7 @@
 }
 
 .currency_rate.dark {
-  color: rgb(244, 185, 9);
+  color: var(--nav-text-active-dark);
 }
 
 @media screen and (min-width: 2500px) {

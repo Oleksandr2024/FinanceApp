@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../store/toolSlice";
 import styles from "./Header.module.css";
+import clsx from "clsx";
 //components
 import CurrencyComponent from "./CurrencyComponent/CurrencyComponent";
 import Navbar from "./Navbar/Navbar";
@@ -12,7 +13,7 @@ const Header = () => {
   return (
     <div
       data-testid="header"
-      className={`${styles.header} ${darkMode ? styles.dark : ""}`}
+      className={clsx(styles.header, { [styles.dark]: darkMode })}
     >
       <Navbar darkMode={darkMode} />
       <CurrencyComponent darkMode={darkMode} />

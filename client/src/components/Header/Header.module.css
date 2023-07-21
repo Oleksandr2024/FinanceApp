@@ -1,3 +1,5 @@
+@import "../../global.css";
+
 .header {
   position: fixed;
   top: 0;
@@ -7,8 +9,8 @@
   width: 100%;
   height: 7vh;
   padding-right: 10%;
-  background-color: #dcdcdc;
-  border-bottom: 2px solid rgb(126, 67, 0);
+  background-color: var(--background-color);
+  border-bottom: 2px solid var(--section-border-dark);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -18,18 +20,18 @@
 }
 
 .header.dark {
-  background-color: #242423;
+  background-color: var(--background-color-dark);
 }
 
 @media screen and (min-width: 2500px) {
   .header {
-    border-bottom: 4px solid rgb(126, 67, 0);
+    border-bottom: 4px solid var(--section-border-dark);
   }
 }
 
 @media screen and (max-width: 820px) {
   .header {
-    border-bottom: 3px solid rgb(126, 67, 0);
+    border-bottom: 3px solid var(--section-border-dark);
   }
 }
 
@@ -48,7 +50,7 @@
     height: 80px;
     padding-right: 7%;
     background-color: #dcdcdc;
-    border-bottom: 3px solid rgb(126, 67, 0);
+    border-bottom: 3px solid var(--section-border-dark);
     display: flex;
     flex-direction: row;
     align-items: center;

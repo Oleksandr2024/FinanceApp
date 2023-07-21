@@ -1,14 +1,16 @@
+@import "../../../../global.css";
+
 .sidebar {
   width: 20%;
   height: auto;
-  background-color: #e0e6f4;
+  background-color: var(--background-color);
   border-right: 1px solid gray;
-  color: #14161a;
+  color: var(--text-color);
   margin-top: 4%;
 }
 
 .sidebar.dark {
-  background-color: #242423;
+  background-color: var(--background-color-dark);
   border-right: 1px solid rgb(144, 144, 144);
   color: #f7f7f7;
 }
@@ -28,7 +30,7 @@
 }
 
 .sidebar_show_button.dark {
-  background: #242423;
+  background: var(--background-color-dark);
   border: 1px solid #404141;
   color: #f7f7f7;
 }
@@ -52,7 +54,7 @@
 
 .sidebar_add_button.dark {
   border: 1px solid #404141;
-  background: #242423;
+  background: var(--background-color-dark);
   color: #f7f7f7;
 }
 
@@ -67,9 +69,9 @@
 }
 
 .sidebar.dark button:hover {
-  background: #242423;
+  background: var(--background-color-dark);
   cursor: pointer;
-  color: rgb(244, 185, 9);
+  color: var(--nav-text-active-dark);
 }
 
 .sidebar button:focus {
@@ -78,7 +80,7 @@
 }
 
 .sidebar h6 {
-  color: #14161a;
+  color: var(--text-color);
   font-size: 1.7rem;
   font-weight: 500;
   margin: 20px 0 10px 0;
@@ -93,7 +95,7 @@
   width: 10vw;
   height: 4.4vh;
   background-color: #e0e6f4;
-  color: #14161a;
+  color: var(--text-color);
   border: 2px solid rgb(203, 211, 221);
   border-radius: 4px;
   text-align: center;
@@ -103,7 +105,7 @@
 }
 
 .sidebar.dark select {
-  background-color: #242423;
+  background-color: var(--background-color-dark);
   color: #f5f8f2;
   border: 1px solid rgb(62, 62, 64);
 }
@@ -113,7 +115,7 @@
 }
 
 .sidebar select option {
-  color: #14161a;
+  color: var(--text-color);
   font-weight: 600;
   font-size: 1.5rem;
 }
@@ -124,7 +126,7 @@
 
 .sidebar_alert {
   margin-top: -10px;
-  color: rgb(255, 26, 26);
+  color: var(--sidebar-alert);
   font-weight: 600;
   font-size: 1.35rem;
 }
@@ -248,8 +250,8 @@
   .sidebar select {
     width: 50%;
     height: 4.4vh;
-    background-color: #dcdcdc;
-    color: #14161a;
+    background-color: var(--background-color);
+    color: var(--text-color);
     border: 2px solid rgb(129, 180, 251);
     border-radius: 4px;
     text-align: center;
@@ -259,7 +261,7 @@
   }
 
   .sidebar select option {
-    color: #14161a;
+    color: var(--text-color);
     font-weight: 500;
   }
 
@@ -310,7 +312,7 @@
 
   .sidebar_alert {
     margin-top: -10px;
-    color: rgb(255, 26, 26);
+    color: var(--sidebar-alert);
     font-weight: 600;
     font-size: 17px;
   }
@@ -346,7 +348,7 @@
   }
 
   .sidebar h6 {
-    color: #14161a;
+    color: var(--text-color);
     font-size: 1.4rem;
     font-weight: 00;
     margin: -8px 0 5px 0;
@@ -368,7 +370,7 @@
   .sidebar_alert {
     margin-top: 1px;
     margin-right: 15%;
-    color: rgb(255, 26, 26);
+    color: var(--sidebar-alert);
     font-weight: 600;
     font-size: 20px;
   }

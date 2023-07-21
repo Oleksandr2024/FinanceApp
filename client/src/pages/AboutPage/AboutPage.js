@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { selectTheme } from "../../store/toolSlice";
 import styles from "./AboutPage.module.css";
 import { useState, useEffect, useRef, useCallback } from "react";
+import clsx from "clsx";
 
 const AboutPage = () => {
   const darkMode = useSelector(selectTheme);
@@ -82,13 +83,13 @@ const AboutPage = () => {
   }, [handleScroll, show4thSection]);
 
   return (
-    <div className={`${styles.about_page} ${darkMode ? styles.dark : ""}`}>
+    <div className={clsx(styles.about_page, { [styles.dark]: darkMode })}>
       <h1>About This App</h1>
 
       <section
-        className={`${styles.content_section} ${
-          showContent[0] ? styles.show : ""
-        }`}
+        className={clsx(styles.content_section, {
+          [styles.show]: showContent[0],
+        })}
       >
         <h2>Overview</h2>
         <p>
@@ -124,9 +125,9 @@ const AboutPage = () => {
       </section>
 
       <section
-        className={`${styles.content_section} ${
-          showContent[1] ? styles.show : ""
-        }`}
+        className={clsx(styles.content_section, {
+          [styles.show]: showContent[1],
+        })}
       >
         <h2>App Features</h2>
         <ul>
@@ -189,9 +190,9 @@ const AboutPage = () => {
 
       <section
         ref={section3Ref}
-        className={`${styles.content_section} ${
-          show3rdSection[1] ? styles.show : ""
-        }`}
+        className={clsx(styles.content_section, {
+          [styles.show]: show3rdSection[1],
+        })}
       >
         <h2>Key Technologies and Development Practices</h2>
         <ul>
@@ -272,9 +273,9 @@ const AboutPage = () => {
 
       <section
         ref={section4Ref}
-        className={`${styles.content_section} ${
-          show4thSection[1] ? styles.show : ""
-        }`}
+        className={clsx(styles.content_section, {
+          [styles.show]: show4thSection[1],
+        })}
       >
         <h2>Potential Future Improvements</h2>
         <p>

@@ -1,5 +1,8 @@
 import { NavLink } from "react-router-dom";
 import styles from "./TickerChartElements.module.css";
+import { selectCurrencyRate } from "../../../../store/toolSlice";
+import { useSelector } from "react-redux";
+import clsx from "clsx";
 
 const TickerChartElements = ({
   changePercent,
@@ -18,25 +21,27 @@ const TickerChartElements = ({
 
   let currentDate = `${day}-${month}-${year} ${hours}:${minutes}:${seconds}`;
 
+  const currentRate = useSelector(selectCurrencyRate);
+
   return (
     <div>
       <section
-        className={`${styles.back_button} ${darkMode ? styles.dark : ""} `}
+        className={clsx(styles.back_button, { [styles.dark]: darkMode })}
       >
         <NavLink to="/">
           <span>Go back to list</span>
         </NavLink>
       </section>
       <section
-        className={`${styles.chart_elements} ${darkMode ? styles.dark : ""}`}
+        className={clsx(styles.chart_elements, { [styles.dark]: darkMode })}
       >
         <h3>
           {currency === "USD" ? (
             !price ? (
               <p
-                className={`${styles.alert_paragraph} ${
-                  darkMode ? styles.dark : ""
-                }`}
+                className={clsx(styles.alert_paragraph, {
+                  [styles.dark]: darkMode,
+                })}
               >
                 "Start tracking tickers again!"
               </p>
@@ -44,7 +49,7 @@ const TickerChartElements = ({
               `$ ${price}`
             )
           ) : (
-            "₴ " + (price * 37).toFixed(0)
+            "₴ " + (price * currentRate).toFixed(0)
           )}
         </h3>
         <span
@@ -74,7 +79,7 @@ const TickerChartElements = ({
             : "₴ " + Math.floor(change * 37)}
         </span>
       </section>
-      <p className={`${styles.chart_date} ${darkMode ? styles.dark : ""}`}>
+      <p className={clsx(styles.chart_date, { [styles.dark]: darkMode })}>
         {currentDate} UTC-2 {currency} NASDAQ
       </p>
     </div>

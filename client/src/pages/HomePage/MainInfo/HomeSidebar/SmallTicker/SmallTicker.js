@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { removeTickerFromWatchingGroup } from "../../../../../store/toolSlice";
 import { getImageSource } from "../../../../../utils/tools";
 import styles from "./SmallTicker.module.css";
+import clsx from "clsx";
 
 const SmallTicker = ({ darkMode, ticker, setAlertText }) => {
   const dispatch = useDispatch();
@@ -25,18 +26,16 @@ const SmallTicker = ({ darkMode, ticker, setAlertText }) => {
 
   return (
     <section
-      className={`${styles.ticker_small_section} ${
-        darkMode ? styles.dark : ""
-      }`}
+      className={clsx(styles.ticker_small_section, { [styles.dark]: darkMode })}
     >
       <img src={imageSource} alt=""></img>
       <h4>{ticker}</h4>
 
       <button
         data-testid="remove-button"
-        className={`${styles.ticker_small_section_button} ${
-          darkMode ? styles.dark : ""
-        }`}
+        className={clsx(styles.ticker_small_section_button, {
+          [styles.dark]: darkMode,
+        })}
         onClick={() => handleDelete()}
       >
         <FontAwesomeIcon icon={faTrash} />

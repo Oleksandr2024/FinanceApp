@@ -5,6 +5,7 @@ import {
   intervalTimeFromStore,
 } from "../../../../../store/toolSlice";
 import styles from "./IntervalSection.module.css";
+import clsx from "clsx";
 
 const IntervalSection = ({ darkMode }) => {
   const [intervalTime, setIntervalTime] = useState(null);
@@ -32,7 +33,7 @@ const IntervalSection = ({ darkMode }) => {
 
   return (
     <section
-      className={`${styles.interval_section} ${darkMode ? styles.dark : ""}`}
+      className={clsx(styles.interval_section, { [styles.dark]: darkMode })}
     >
       <form onSubmit={handleInterval}>
         <h6>Update tracking interval:</h6>
@@ -40,9 +41,9 @@ const IntervalSection = ({ darkMode }) => {
           <p className={styles.sidebar_interval_alert}>Select interval !</p>
         )}
         <span
-          className={`${styles.interval_value_span} ${
-            darkMode ? styles.dark : ""
-          }`}
+          className={clsx(styles.interval_value_span, {
+            [styles.dark]: darkMode,
+          })}
         >
           {storeInterval}
         </span>

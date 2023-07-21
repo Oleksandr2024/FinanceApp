@@ -1,15 +1,17 @@
+@import "../../../global.css";
+
 .main_info {
   display: flex;
   width: 100%;
   min-height: 80vh;
   flex-direction: row;
-  background-color: #e0e6f4;
+  background-color: var(--background-color);
   color: white;
   font-family: "Montserrat", sans-serif;
 }
 
 .main_info.dark {
-  background-color: #242423;
+  background-color: var(--background-color-dark);
 }
 
 @media screen and (max-width: 750px) {

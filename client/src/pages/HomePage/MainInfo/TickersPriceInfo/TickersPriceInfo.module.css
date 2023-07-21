@@ -1,3 +1,5 @@
+@import "../../../../global.css";
+
 .tickers_price_info {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,7 @@
 }
 
 .tickers_price_info.dark {
-  background-color: #242423;
+  background-color: var(--background-color-dark);
 }
 
 .tickers_price_info_headings {
@@ -23,8 +25,8 @@
 
 .tickers_price_info_headings.dark {
   background-color: #d7c025;
-  border-top: 2px solid rgb(126, 67, 0);
-  border-bottom: 2px solid rgb(126, 67, 0);
+  border-top: 2px solid var(--section-border-dark);
+  border-bottom: 2px solid var(--section-border-dark);
 }
 
 .tickers_price_info_headings p {
@@ -65,8 +67,8 @@
   }
 
   .tickers_price_info_headings.dark {
-    border-top: 3px solid rgb(126, 67, 0);
-    border-bottom: 3px solid rgb(126, 67, 0);
+    border-top: 3px solid var(--section-border-dark);
+    border-bottom: 3px solid var(--section-border-dark);
   }
 
   .no_tickers_paragraph {

@@ -11,6 +11,7 @@ import SmallTicker from "./SmallTicker/SmallTicker";
 import IntervalSection from "./IntervalSection/IntervalSection";
 import CurrencyRate from "./CurrencyRate/CurrencyRate";
 import styles from "./Sidebar.module.css";
+import clsx from "clsx";
 
 const Sidebar = ({ darkMode, shouldShowTickers }) => {
   const dispatch = useDispatch();
@@ -34,8 +35,7 @@ const Sidebar = ({ darkMode, shouldShowTickers }) => {
     if (storedWatchingGroup) {
       dispatch(setWatchingGroup(JSON.parse(storedWatchingGroup)));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [dispatch]);
 
   //toogle show tickers/show news button&function
   const startOrStopTracklingTickers = (trackingState) => {
@@ -118,14 +118,14 @@ const Sidebar = ({ darkMode, shouldShowTickers }) => {
   return (
     <div
       data-testid="sidebar"
-      className={`${styles.sidebar} ${darkMode ? styles.dark : ""}`}
+      className={clsx(styles.sidebar, { [styles.dark]: darkMode })}
     >
       <CurrencyRate darkMode={darkMode} />
       <button
         ref={buttonShowRef}
-        className={`${styles.sidebar_show_button} ${
-          darkMode ? styles.dark : ""
-        }`}
+        className={clsx(styles.sidebar_show_button, {
+          [styles.dark]: darkMode,
+        })}
         onClick={() => startOrStopTracklingTickers(shouldShowTickers)}
       >
         {shouldShowTickers ? "Show news" : "Show tickers"}
@@ -143,9 +143,9 @@ const Sidebar = ({ darkMode, shouldShowTickers }) => {
             </select>
             <button
               ref={buttonAddRef}
-              className={`${styles.sidebar_add_button} ${
-                darkMode ? styles.dark : ""
-              }`}
+              className={clsx(styles.sidebar_add_button, {
+                [styles.dark]: darkMode,
+              })}
               onClick={() => addTicker(selectedTicker)}
             >
               Add

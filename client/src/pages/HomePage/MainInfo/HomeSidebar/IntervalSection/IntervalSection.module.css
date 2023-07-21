@@ -1,7 +1,9 @@
+@import "../../../../../global.css";
+
 .sidebar_interval_alert {
   margin-top: 20px;
   margin-bottom: -10px;
-  color: rgb(255, 26, 26);
+  color: var(--sidebar-alert);
   font-weight: 600;
   font-size: 1.35rem;
 }
@@ -72,9 +74,9 @@
 }
 
 .interval_section.dark input[type="submit"] {
-  background: #242423;
+  background: var(--background-color-dark);
   border: 2px;
-  color: #ded3d3;
+  color: var(--text-color-dark);
   font-weight: 600;
   border: 1px solid rgb(37, 36, 36);
 }
@@ -86,8 +88,8 @@
 }
 
 .interval_section.dark input[type="submit"]:hover {
-  background: #242423;
-  color: rgb(244, 185, 9);
+  background: var(--background-color-dark);
+  color: var(--nav-text-active-dark);
   letter-spacing: 2.5px;
 }
 
@@ -213,7 +215,7 @@
   .sidebar_interval_alert {
     margin-top: 10px;
     margin-bottom: -1px;
-    color: rgb(255, 26, 26);
+    color: var(--sidebar-alert);
     font-weight: 500;
     font-size: 20px;
   }

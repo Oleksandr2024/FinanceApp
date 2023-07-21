@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { toggleTheme } from "../../../store/toolSlice";
 import styles from "./ThemeComponent.module.css";
+import clsx from "clsx";
 
 const ThemeComponent = ({ darkMode }) => {
   const dispatch = useDispatch();
@@ -11,18 +12,24 @@ const ThemeComponent = ({ darkMode }) => {
         Light
       </p>
       <div
-        className={`${styles.toggler_slider} ${darkMode ? styles.dark : ""}`}
+        className={clsx(styles.toggler_slider, {
+          [styles.dark]: darkMode,
+        })}
         onClick={() => dispatch(toggleTheme())}
         data-testid="toggle-slider"
       >
         <div
           data-testid="toggle-circle"
-          className={`${styles.toggler_slider_circle} ${
-            darkMode ? styles.dark : ""
-          }`}
+          className={clsx(styles.toggler_slider_circle, {
+            [styles.dark]: darkMode,
+          })}
         ></div>
       </div>
-      <p className={`${styles.toggler_dark} ${darkMode ? styles.dark : ""}`}>
+      <p
+        className={clsx(styles.toggler_dark, {
+          [styles.dark]: darkMode,
+        })}
+      >
         Dark
       </p>
     </div>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useSelector } from "react-redux";
 import AliceCarousel from "react-alice-carousel";
 import store from "../../../../store/store";
@@ -8,32 +8,50 @@ import { Link } from "react-router-dom";
 import styles from "./BannerCarousel.module.css";
 import { selectCurrency } from "../../../../store/toolSlice";
 
+const getLatestGeneratedTickers = async () => {
+  return new Promise((resolve, reject) => {
+    const unsubscribe = store.subscribe(() => {
+      const tickers = store.getState().data.tickers;
+      if (tickers !== undefined) {
+        resolve(tickers[tickers.length - 1]);
+        unsubscribe();
+      }
+    });
+  });
+};
+
 const BannerCarousel = () => {
   const tickers = useSelector(selectAllTickers);
   const currency = useSelector(selectCurrency);
 
   const [temporaryTickers, setTemporaryTickers] = useState([]);
 
-  const getLatestGeneratedTickers = async () => {
-    return new Promise((resolve, reject) => {
-      const unsubscribe = store.subscribe(() => {
-        const tickers = store.getState().data.tickers;
-        if (tickers !== undefined) {
-          resolve(tickers[tickers.length - 1]);
-          unsubscribe();
-        }
-      });
-    });
-  };
+  // const getLatestGeneratedTickers = async () => {
+  //   return new Promise((resolve, reject) => {
+  //     const unsubscribe = store.subscribe(() => {
+  //       const tickers = store.getState().data.tickers;
+  //       if (tickers !== undefined) {
+  //         resolve(tickers[tickers.length - 1]);
+  //         unsubscribe();
+  //       }
+  //     });
+  //   });
+  // };
+
+  const getLatestGeneratedTickersCallback = useCallback(
+    getLatestGeneratedTickers,
+    []
+  );
 
   useEffect(() => {
+    console.log("effect worked");
     const fetchLatestTickers = async () => {
-      const latestTickersPromise = getLatestGeneratedTickers();
+      const latestTickersPromise = getLatestGeneratedTickersCallback();
       const latestTickers = await latestTickersPromise;
       setTemporaryTickers(latestTickers);
     };
     fetchLatestTickers();
-  }, [tickers]);
+  }, [tickers, getLatestGeneratedTickersCallback]);
 
   let lastTickers;
   if (temporaryTickers[0] !== undefined) {

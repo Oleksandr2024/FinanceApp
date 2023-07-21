@@ -5,7 +5,7 @@ export default class SocketClient {
   socket;
 
   connect() {
-    this.socket = io("http://localhost:4000"); // process.env.REACT_APP_API_URL
+    this.socket = io(process.env.REACT_APP_API_URL); // process.env.REACT_APP_API_URL
   }
 
   disconnect() {

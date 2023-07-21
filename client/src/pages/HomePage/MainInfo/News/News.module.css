@@ -1,6 +1,8 @@
+@import "../../../../global.css";
+
 .news {
   display: flex;
-  color: #14161a;
+  color: var(--text-color);
   flex-direction: column;
   justify-content: center;
   width: 80vw;
@@ -13,7 +15,7 @@
 
 .news h1 {
   font-size: 3.4rem;
-  color: #14161a;
+  color: var(--text-color);
   margin-top: 15px;
   margin-bottom: 20px;
 }
@@ -41,7 +43,7 @@
 }
 
 .news_section_div_1 i {
-  color: #14161a;
+  color: var(--text-color);
 }
 
 .news_section_div_1.dark i {
@@ -52,7 +54,7 @@
   padding-right: 5%;
   margin-left: 2%;
   font-size: 1.5rem;
-  color: #14161a;
+  color: var(--text-color);
 }
 
 .news_section_div_1.dark h4 {
@@ -78,7 +80,7 @@
 }
 
 .news_section_div_2 p {
-  color: #14161a;
+  color: var(--text-color);
   margin-right: 15px;
 }
 

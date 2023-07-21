@@ -1,3 +1,5 @@
+@import "../../../../global.css";
+
 .chart_elements {
   display: flex;
   justify-content: center;
@@ -9,7 +11,7 @@
 .chart_elements h3 {
   font-size: 2rem;
   padding-right: 2%;
-  color: #14161a;
+  color: var(--text-color);
 }
 
 .chart_elements.dark h3 {
@@ -26,7 +28,7 @@
 }
 
 .chart_date {
-  color: #14161a;
+  color: var(--text-color);
   letter-spacing: 1px;
   padding-bottom: 10px;
   margin-bottom: 20px;
@@ -42,7 +44,7 @@
   /* width: 30%; */
   min-width: 9vw;
   width: 20%;
-  background-color: #dce1ed;
+  background-color: var(--text-color-dark);
   border: 1px solid rgb(204, 208, 208);
   border-radius: 8px;
   padding: 5px;
@@ -62,8 +64,8 @@
 
 .back_button.dark a {
   border: 1px solid rgb(37, 36, 36);
-  color: #14161a;
-  background-color: #14161a;
+  color: var(--text-color);
+  background-color: var(--text-color);
 }
 
 .back_button a:hover {

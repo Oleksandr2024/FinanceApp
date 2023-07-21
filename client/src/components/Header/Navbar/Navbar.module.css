@@ -1,3 +1,5 @@
+@import "../../../global.css";
+
 .nav {
   display: flex;
   width: 20%;
@@ -14,18 +16,19 @@
 }
 
 .navlink.active span {
-  color: #12608a;
+  color: var(--nav-text-active);
 }
 
 .navlink.active.dark span {
-  color: rgb(244, 185, 9);
+  color: var(--nav-text-active-dark);
 }
 
 nav span {
-  color: #262525;
+  color: var(--background-color-dark);
+  transition: 0.5s;
 }
 nav span:hover {
-  color: #12608a;
+  color: var(--nav-text-active);
   letter-spacing: 0.8px;
 }
 
@@ -35,7 +38,7 @@ nav span:hover {
 }
 
 .nav.dark span:hover {
-  color: rgb(244, 185, 9);
+  color: var(--nav-text-active-dark);
   letter-spacing: 0.8px;
 }
 

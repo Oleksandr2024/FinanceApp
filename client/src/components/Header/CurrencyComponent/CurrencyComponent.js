@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectCurrency, toggleCurrency } from "../../../store/toolSlice";
 import styles from "./CurrencyComponent.module.css";
+import clsx from "clsx";
 
 const CurrencyComponent = ({ darkMode }) => {
   const currency = useSelector(selectCurrency);
@@ -17,7 +18,9 @@ const CurrencyComponent = ({ darkMode }) => {
   return (
     <select
       ref={selectRef}
-      className={`${styles.header_select} ${darkMode ? styles.dark : ""}`}
+      className={clsx(styles.header_select, {
+        [styles.dark]: darkMode,
+      })}
       value={currency}
       onChange={() => changeCurrency()}
     >

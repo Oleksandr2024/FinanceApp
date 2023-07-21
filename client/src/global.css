@@ -1,0 +1,13 @@
+:root {
+  --text-color: #14161a;
+  --text-color-dark: #f2f5f9;
+  --background-color: #e7e5e5;
+  --background-color-dark: #242423;
+  --sidebar-alert: rgb(255, 26, 26);
+  --section-border-dark: rgb(126, 67, 0);
+  --nav-text-active: #12608a;
+  --nav-text-active-dark: rgb(244, 185, 9);
+  /* Configure your variables */
+}
+
+/* then => in other files:  @import './global.css'; */

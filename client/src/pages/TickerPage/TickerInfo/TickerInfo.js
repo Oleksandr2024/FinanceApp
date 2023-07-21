@@ -3,6 +3,7 @@ import {
   getInfoAboutCompany,
 } from "../../../utils/tools";
 import styles from "./TickerInfo.module.css";
+import clsx from "clsx";
 
 const TickerInfo = ({ darkMode, ticker }) => {
   const tickerName = getNameFromAbbreviation(ticker);
@@ -10,13 +11,13 @@ const TickerInfo = ({ darkMode, ticker }) => {
   return (
     <section
       data-testid="ticker-info"
-      className={`${styles.ticker_page_info} ${darkMode ? styles.dark : ""}`}
+      className={clsx(styles.ticker_page_info, { [styles.dark]: darkMode })}
     >
       <h1>{tickerName}</h1>
       <p
-        className={`${styles.ticker_page_company_description} ${
-          darkMode ? styles.dark : ""
-        }`}
+        className={clsx(styles.ticker_page_company_description, {
+          [styles.dark]: darkMode,
+        })}
       >
         {getInfoAboutCompany(ticker)}
       </p>

@@ -1,6 +1,7 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectTheme } from "./store/toolSlice";
+import clsx from "clsx";
 //components
 import Layout from "./layouts/Layout";
 import TickerPage from "./pages/TickerPage/TickerPage";
@@ -14,7 +15,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className={`${styles.App} ${darkMode ? styles.dark : ""}`}>
+      <div className={clsx(styles.App, { [styles.dark]: darkMode })}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />

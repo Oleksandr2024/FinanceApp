@@ -1,4 +1,6 @@
 /*left part of ticker page*/
+@import "../../../global.css";
+
 .ticker_page_info {
   width: 30%;
   border-right: 1px solid gray;
@@ -7,7 +9,7 @@
 .ticker_page_info h1 {
   font-size: 4rem;
   padding-top: 5%;
-  color: #14161a;
+  color: var(--text-color);
 }
 
 .ticker_page_info.dark h1 {
@@ -17,7 +19,7 @@
 }
 
 .ticker_page_company_description {
-  color: #14161a;
+  color: var(--text-color);
   margin: 10px;
   padding: 10px;
   font-size: 20px;

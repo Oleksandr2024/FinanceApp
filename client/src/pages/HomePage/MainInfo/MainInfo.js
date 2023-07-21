@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../../store/toolSlice";
 import styles from "./MainInfo.module.css";
+import clsx from "clsx";
 
 import Sidebar from "./HomeSidebar/Sidebar";
 import TickersPriceInfo from "./TickersPriceInfo/TickersPriceInfo";
@@ -12,7 +13,7 @@ const MainInfo = ({ shouldShowTickers }) => {
   return (
     <div
       data-testid="main-info"
-      className={`${styles.main_info} ${darkMode ? styles.dark : ""}`}
+      className={clsx(styles.main_info, { [styles.dark]: darkMode })}
     >
       <Sidebar darkMode={darkMode} shouldShowTickers={shouldShowTickers} />
       {shouldShowTickers ? (

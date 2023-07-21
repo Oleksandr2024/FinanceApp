@@ -9,6 +9,7 @@ import { selectTheme } from "../../store/toolSlice";
 import styles from "./TickerPage.module.css";
 import TickerInfo from "./TickerInfo/TickerInfo";
 import TickerApexChart from "./TickerChart/TickerApexChart";
+import clsx from "clsx";
 
 const TickerPage = () => {
   const tickers = useSelector(selectAllTickers);
@@ -22,7 +23,7 @@ const TickerPage = () => {
   }
 
   return (
-    <div className={`${styles.ticker_page} ${darkMode ? styles.dark : ""}`}>
+    <div className={clsx(styles.ticker_page, { [styles.dark]: darkMode })}>
       <TickerInfo darkMode={darkMode} ticker={thisTicker?.ticker} />
       <TickerApexChart
         darkMode={darkMode}

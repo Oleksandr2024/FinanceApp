@@ -1,3 +1,5 @@
+@import "../../../../../global.css";
+
 .ticker_small_section {
   display: flex;
   width: 90%;
@@ -14,7 +16,7 @@
 }
 
 .ticker_small_section h4 {
-  color: #14161a;
+  color: var(--text-color);
   padding: 0 10px;
   width: 5vw;
   margin-left: 15%;
@@ -28,7 +30,7 @@
 .ticker_small_section_button {
   max-width: 4rem;
   min-height: 3rem;
-  background: #e0e6f4;
+  background: var(--background-color);
   border: none;
   width: 3rem;
   margin-right: 10%;
@@ -37,20 +39,20 @@
 .ticker_small_section_button.dark {
   max-width: 4rem;
   min-height: 3rem;
-  background: #242423;
+  background: var(--background-color-dark);
   border: none;
   width: 3rem;
   margin-right: 10%;
 }
 
 section > button > svg {
-  background: #c9e1f1;
+  background: var(--background-color);
   font-size: 2rem;
   transition: 0.3s;
 }
 
 section > button.dark > svg {
-  background: #242423;
+  background: var(--background-color-dark);
 }
 
 section > button > svg:hover {
@@ -119,7 +121,7 @@ section:nth-child(n) > button.dark > svg > path {
   }
 
   .ticker_small_section h4 {
-    color: #14161a;
+    color: var(--text-color);
     padding: 0 10px;
     margin-right: -3%;
   }

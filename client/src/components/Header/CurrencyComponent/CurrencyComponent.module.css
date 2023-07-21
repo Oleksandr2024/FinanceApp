@@ -1,8 +1,10 @@
+@import "../../../global.css";
+
 .header_select {
   width: 8%;
   height: 50%;
   margin-right: 25px;
-  background-color: #dcdcdc;
+  background-color: var(--background-color);
   color: #222222;
   font-size: 1.1rem;
   border-color: #8c8c8d;
@@ -11,7 +13,7 @@
 }
 
 .header_select.dark {
-  background-color: #242423;
+  background-color: var(--background-color-dark);
   border-color: #373736;
   color: white;
   transition: 0.5s;
@@ -23,12 +25,12 @@
 }
 
 .header_select.dark:hover {
-  color: rgb(244, 185, 9);
+  color: var(--nav-text-active-dark);
   letter-spacing: 0.7px;
 }
 
 .header_select option {
-  background-color: #dcdcdc;
+  background-color: var(--background-color);
   color: #242423;
   font-size: 1.2rem;
 }
