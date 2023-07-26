@@ -40,7 +40,7 @@ let generatedQuotes = [];
 //keep track of quotes array length not be longer than 10
 function trackQuotesLength(quotes) {
   const newQuotes = [...quotes];
-  console.log("length: " + newQuotes.length);
+  // console.log("length: " + newQuotes.length);
   if (quotes.length > 10) {
     newQuotes.shift();
   }
